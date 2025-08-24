@@ -1,7 +1,9 @@
-from langchain_openai import ChatOpenAI
+# New import for the Gemini model
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage
 
-llm = ChatOpenAI(model="gpt-3.5-turbo")
+# New model instantiation
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 
 message = HumanMessage(
     content="What is the difference between a galaxy and a nebula?")
